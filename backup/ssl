@@ -1,0 +1,15 @@
+<VirtualHost *:443>
+	SSLEngine on
+	SSLCertificateFile /alidata/server/httpd/conf/server.crt
+	SSLCertificateKeyFile /alidata/server/httpd/conf/server.key
+	<Directory /alidata/www/m2ce>
+		AllowOverride All
+	</Directory>
+	ServerAdmin email@example.com
+	DocumentRoot /alidata/www/m2ce
+	ServerName www.earthblackbox.com
+	#ServerAlias earthblackbox.com
+	ErrorLog "/alidata/log/httpd/m2ce-error.log"
+        CustomLog "/alidata/log/httpd/m2ce.log" common
+
+</VirtualHost>
