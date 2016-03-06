@@ -63,6 +63,11 @@ class Save extends \Magento\Catalog\Controller\Adminhtml\Product
      */
     public function execute()
     {
+        $a = BP . '/var/log/test.log';
+        $writer = new \Zend\Log\Writer\Stream(BP . '/var/log/test.log');
+        $logger = new \Zend\Log\Logger();
+        $logger->addWriter($writer);
+        $logger->info('aaaaaaaaaaaaaaaaa');
         $storeId = $this->getRequest()->getParam('store');
         $redirectBack = $this->getRequest()->getParam('back', false);
         $productId = $this->getRequest()->getParam('id');
