@@ -10,18 +10,6 @@ use Magento\Framework\Event\ObserverInterface;
 class Productdesc implements ObserverInterface
 {
 
-
-    /**
-     * @param DimensionFactory $dimensionFactory
-     * @param ConfigInterface $indexerConfig
-     * @param IndexerHandlerFactory $indexerHandlerFactory
-     */
-    public function __construct(
-    ) {
-
-    }
-
-
     /**
      * @param \Magento\Framework\Event\Observer $observer
      * @return void

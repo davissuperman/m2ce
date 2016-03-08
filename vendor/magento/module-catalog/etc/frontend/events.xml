@@ -15,7 +15,5 @@
     <event name="page_block_html_topmenu_gethtml_before">
         <observer name="catalog_add_topmenu_items" instance="Magento\Catalog\Observer\AddCatalogToTopmenuItemsObserver" />
     </event>
-    <event name="controller_action_catalog_product_save_entity_after">
-        <observer name="save_product_desc" instance="Magento\Catalog\Observer\Productdesc" />
-    </event>
+
 </config>
