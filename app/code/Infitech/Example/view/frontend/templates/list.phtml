@@ -1,0 +1,6 @@
+<?php
+$_productCollection = $block->getLoadedProductCollection();
+echo count($_productCollection);
+foreach($_productCollection as $each){
+    echo $each->getId().'  <br/>';
+}
