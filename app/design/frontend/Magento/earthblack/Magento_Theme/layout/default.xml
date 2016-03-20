@@ -8,13 +8,13 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="header.panel">
+            <block class="Magento\Theme\Block\Html\Header\Logo" name="logo">
+                <arguments>
+                    <argument name="logo_img_width" xsi:type="number">50</argument>
+                    <argument name="logo_img_height" xsi:type="number">40</argument>
+                </arguments>
+            </block>
             <block class="Magento\Framework\View\Element\Html\Links" name="header.links">
-                <!--<block class="Magento\Theme\Block\Html\Header\Logo" name="logo">-->
-                    <!--<arguments>-->
-                        <!--<argument name="logo_img_width" xsi:type="number">189</argument>-->
-                        <!--<argument name="logo_img_height" xsi:type="number">64</argument>-->
-                    <!--</arguments>-->
-                <!--</block>-->
                 <arguments>
                     <argument name="css_class" xsi:type="string">header links</argument>
                 </arguments>
@@ -31,6 +31,6 @@
         </referenceContainer>
         <referenceBlock name="report.bugs" remove="true"/>
         <move element="copyright" destination="before.body.end"/>
-        <!--<move element="header-wrapper" destination="header.panel"/>-->
+        <move element="minicart" destination="header.panel"/>
     </body>
 </page>
